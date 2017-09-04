@@ -14,7 +14,8 @@ You have to provide socket `url` to the `connect` method and you're off to go.
 import SailsSocket from 'sails-socket'
 ...
 
-SailsSocket.connect('http://your-socket-server/');
+const initializeParams = {url: 'http://sails-server.com/'}
+SailsSocket.connect(initializeParams);
 SailsSocket.get('/hello').then(function(jwr) {
   console.log(jwr.body);
 }).catch(function(jwr) {
